@@ -12,3 +12,6 @@ INSTALLATION:
 		be obtained by contacting the person listed on www.aprsworld.net.
 	The settings file requires nothing special, but I'm not including it here.
 		You don't need to put any of the apps in INSTALLED_APPS for it to work.
+	Make sure you point to the templates/ dir in your TEMPLATE_DIRS setting or
+		else when you turn debug off Django will error. The templates there are
+		empty files, you can customize them to do whatever you wish.
