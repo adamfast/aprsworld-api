@@ -1,0 +1,14 @@
+This is a complete project instead of an app. That does violate the
+best-practice of being reusable, simply because the application needs
+to connect to a database that the user of this application does not
+own - so you can't store any of your own stuff in it. For that reason,
+this application will need to be run on its own and the data it provides
+ingested by some other means (if you're using Django, I recommend my
+django-locationtracking project.)
+
+INSTALLATION:
+	Install it like you would any other Django application running on your server.
+	You will need a username/password for the aprsworld database. This can
+		be obtained by contacting the person listed on www.aprsworld.net.
+	The settings file requires nothing special, but I'm not including it here.
+		You don't need to put any of the apps in INSTALLED_APPS for it to work.
