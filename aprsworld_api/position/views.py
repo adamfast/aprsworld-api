@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from models import Position, LastPosition
 
 def station_positions(request, callsign, number_requested=10):
-    data = Position.objects.filter(source__startswith=callsign)[number_requested:]
+    data = Position.objects.filter(source__startswith=callsign).order_by('-packet_date')[:number_requested]
 
     # handle different formats, but make sure it's something valid
     if request.GET['format'] == 'xml':
